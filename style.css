@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.cal {
+
+  font-family: "Space Mono", monospace;
+  text-align:center;
+  font-weight:700;
+  background-color:#f7b7cb;
+  padding:2em;
+  border-radius: 2em;
+  margin-left:7em;
+  margin-right:7em;
+  opacity: 0.8;
+
+}
+.other {
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+  text-align: center;
+  padding: 1em;
+  color:rgb(138, 12, 85);
+  font-weight:500;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #f7b7cb;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+}
+li a {
+    text-decoration:none;
+    color:rgb(78, 13, 71);
+    display: inline;
+    padding:1em;
+    font-family: "Space Mono", monospace;
+}
+li a:hover {
+  background-color: rgb(255, 207, 232);
+}
+li {
+    text-decoration:none;
+    color:rgb(78,13,71);
+    display: inline;
+    padding:1em;
+    font-family: "Space Mono", monospace;
+
+
+
+.cal {
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+
+
+button,
+input,
+textarea,
+select {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
