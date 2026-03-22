@@ -1,7 +1,7 @@
 //times
-let focus = document.getElementById("focus-timer") //25 min
-let short = document.getElementById("sbreak-timer") //5 min
-let long = document.getElementById("lbreak-timer") //10 min
+let focus = document.getElementById("focus-timer") //25 min (pomodoro)
+let short = document.getElementById("sbreak-timer") //5 min {short}
+let long = document.getElementById("lbreak-timer") //10 min (long)
 let timers = document.querySelectorAll(".tdisplay") //timers under pomodoro
 //buttons
 let session = document.getElementById("focus") //button
@@ -17,13 +17,14 @@ function defaulttime() {
     focus.style.display = "block"
     short.style.display = "none"
     long.style.display = "none"
+    timernow = focus
 }
 
 defaulttime()
 
 function hide() {
-    timers.forEach((time) => {
-        time.style.display="none"
+    timers.forEach((timer) => {
+        timer.style.display="none"
     });
 }
 session.addEventListener("click", () => {
@@ -32,6 +33,7 @@ session.addEventListener("click", () => {
     session.classList.add("active")
     sB.classList.remove("active")
     lB.classList.remove("active")
+    timernow = focus
 })
 sB.addEventListener("click", () => {
     hide()
@@ -39,6 +41,7 @@ sB.addEventListener("click", () => {
     session.classList.remove("active")
     sB.classList.add("active")
     lB.classList.remove("active")
+    timernow = short
 })
 lB.addEventListener("click", () => {
     hide()
@@ -46,34 +49,45 @@ lB.addEventListener("click", () => {
     session.classList.remove("active")
     sB.classList.remove("active")
     lB.classList.add("active")
+    timernow = long
 })
-function begin(timers) {
+
+
+ function begin(timerDisplay) {
     if(interval) {
         clearInterval(interval)
     }
-    timerlength = timers.getAttribute("data-duration").split(":")[0]
+    timerlength = timerDisplay.getAttribute("data-duration").split(":")[0]
 
-    let ms =timerlength *60000
+    let ms =timerlength *60*1000
     let ending = Date.now() + ms
-    interval = setInterval(() => {
-        const timeleft = new DataTransfer(ending - Date.now())
-        if (timeleft < 0) {
+    interval = setInterval(function () {
+        const timeleft = new Date(ending - Date.now())
+        if (timeleft <= 0) {
             clearInterval(interval)
-            timers.textcontent = "00:00"
+            timerDisplay.textContent = "00:00"
             const alarm=new Audio("assets/sparkle-timer.mp3")
             alarm.play()
         }
         else {
+            const minutes = Math.floor(timeleft/60000)
+            const seconds = ((timeleft%60000)/1000).toFixed(0)
+            const formatted = `${minutes}:${seconds.toString().padStart(2, "0")}`
+            timerDisplay.textContent = formatted
             
-        }
-        
+        } 
     }, 1000)
 
-}
+ } 
+
+
 startB.addEventListener("click", () => {
-    if(timernow){
         begin(timernow)
-    }
     
+
+})
+
+stopB.addEventListener("click", () => {
+        clearInterval(interval)
 
 })
