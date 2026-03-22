@@ -1,7 +1,14 @@
 * {
   box-sizing: border-box;
 }
-.cal {
+.timer-stuff {
+  align-content: center;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.widgets {
 
   font-family: "Space Mono", monospace;
   text-align:center;
@@ -9,12 +16,69 @@
   background-color:#f7b7cb;
   padding:2em;
   border-radius: 2em;
-  margin-left:7em;
-  margin-right:7em;
+  margin: 3em 7em;
   opacity: 0.8;
 
 }
-.other {
+.timer{
+  padding:2em;
+  background-color:#ffcfde;
+  border-radius:2em;
+  margin-left:7em;
+  margin-right:7em;
+  font-family: "Space Mono", monospace;
+  text-align:center;
+  font-weight:700;
+
+}
+ .pomodoro {
+  padding:0rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:21rem;
+  height:21rem;
+  position:relative;
+  margin: 2rem auto;
+  border-radius: 50%;
+  background:#ffffff;
+  content:"";
+  border-radius:50%;
+  font-size: 40px
+
+
+  
+
+}
+.pomodoro::before {
+  content:"";
+  position:absolute;
+  border:10px solid #8e3a55;
+  border-radius:50%;
+  width: 19rem;
+  height:19rem;
+  align-content: center;
+  align-self:center;
+  text-align: center;
+}
+.pomo-buttons {
+  background-color:#ffedf3;
+  outline-color: #8e3a55;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+  color:#8e3a55;
+}
+.pomo-buttons:hover {
+  background-color:#ffffff;
+}
+
+img {
+  width: 100%;
+  border-color:#8e3a55;
+}
+p {
   font-family: "Space Mono", monospace;
   font-size: 15px;
   text-align: center;
@@ -81,6 +145,7 @@ select {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-style: normal;
+  font-size:100px;
 }
 
 .space-mono-regular-italic {
@@ -93,4 +158,17 @@ select {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   font-style: italic;
+}
+
+/* timer stuff */
+@media screen and (min-width: 32px) and (max-width: 600px) {
+  .pomodoro {
+    transform: scale(.9);
+  }
+
+  .timer {
+    width: 500px;
+  }
+  
+
 }

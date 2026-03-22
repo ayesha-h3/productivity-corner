@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/style.css" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    </head>
+    <nav>
+        <ul>
+            <li class="title">timer!</li>
+            <li>
+                <a href="home.html">home</a>
+            </li>
+            <li>
+                <a href = "music.html">music</a>
+            </li>
+            <li>
+                <a href="timer.html">timer</a>
+            </li>
+            <li>
+                <a href="tasks.html">tasks</a>
+            </li>
+        </ul>
+    <body>
+        <div class="timer" class="widgets">
+        <div class="timer-stuff">
+            <h1>pomodoro timer *</h1>
+            <button class="pomo-buttons" id="focus">focus</button>
+            <button class="pomo-buttons" id="sbreak">short break</button>
+            <button class="pomo-buttons" id="lbreak">long break</button>
+        </div>
+
+
+
+        <main>
+            <div class="pomodoro">
+                <div id="focus-timer" class="tdisplay" data-duration="25.00">
+                    <h1 class="time">25:00</h1>
+                </div>
+                <div id="sbreak-timer" class="tdisplay" data-duration="5.00">
+                    <h1 class="time">5:00</h1>
+                </div>
+                <div id="lbreak-timer" class="tdisplay" data-duration="10.00">
+                    <h1 class="time">10:00</h1>
+                 </div>
+                
+                </div>
+                <div class="controls">
+                    <button id="start" class="pomo-buttons">start</button>
+                    <button id="stop" class="pomo-buttons">stop</button>
+                </div>
+            </div>
+
+        </main>
+        <script src="timerscript.js"></script>
+
+
+    </body>
+
+
+</html>
