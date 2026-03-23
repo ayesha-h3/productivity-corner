@@ -12,4 +12,16 @@ function updateCalendar () {
 
 }
 updateCalendar();
+document.addEventListener('DOMContentLoaded', getPic())
+async function getPic() {
+    const pic = await fetch('https://api.nasa.gov/planetary/apod');
+    const picJson = await pic.json();
+    const url = picJson[0].url;
+    const imgwidth = picJson[0].width;
+    const imgheight = picJson[0].height;
+    const imgelem = document.getElementById()
 
+
+
+
+}
