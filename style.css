@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+/* a small timer thing */
 .timer-stuff {
   align-content: center;
   text-align: center;
@@ -8,6 +9,8 @@
   box-sizing: border-box;
   margin: 0 auto;
 }
+
+/* for all the pink rectangles! */
 .widgets {
 
   font-family: "Space Mono", monospace;
@@ -18,8 +21,85 @@
   border-radius: 2em;
   margin: 3em 25%;
   opacity: 0.8;
+}
+footer {
+  background-color:rgb(250, 219, 237);
+  margin-top: 5em;
+  padding: 1em;
+  font-weight: 200;
+  font-style:oblique;
+  font-size: 30px;
+  color:rgb(194, 138, 171);
+}
+
+/* task tracker things */
+ #to-dos {
+  font-family: "Space Mono", monospace;
 
 }
+#task {
+  font-family: "Space Mono", monospace;
+  border: none;
+  background:rgb(255, 239, 247);
+  color:rgb(173, 96, 141);
+}
+#add {
+   background-color:#ffedf3;
+   outline-width: 1%;
+  border-color:rgb(204, 119, 163);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+  color:#8e3a55;
+  cursor: pointer;
+}
+#task-list {
+  list-style-type: none;
+  font-size: 17px;
+  padding: 12px 8px;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+  #task-list li::before {
+  content:'';
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-image: url(assets/open-star.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+
+}
+.done {
+  text-decoration: line-through;
+}
+#task-list li.done::before {
+  background-image: url(assets/closed-star.png);
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color:#ba7f91;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background:#ffcfde;
+}
+
+
+
+/*a lot of timer stuff*/
 .timer{
   padding:2em;
   background-color:#ffcfde;
@@ -32,6 +112,7 @@
 
 }
  .pomodoro {
+  /*insert crashout because I was trying everything imaginable*/
   padding:0rem;
   display:flex;
   flex-direction: column;
@@ -46,10 +127,6 @@
   content:"";
   border-radius:50%;
   font-size: 40px
-
-
-  
-
 }
 .pomodoro::before {
   content:"";
@@ -74,6 +151,7 @@
   background-color:#ffffff;
 }
 
+/*some general cross-site things*/
 img {
   width: 100%;
   border-color:#8e3a55;
@@ -87,6 +165,8 @@ p {
   font-weight:500;
 }
 
+/*some stuff for the navigation bar*/
+nav {
 ul {
   list-style-type: none;
   background-color: #f7b7cb;
@@ -110,23 +190,20 @@ li {
     display: inline;
     padding:1em;
     font-family: "Space Mono", monospace;
-
-
-
-.cal {
-  font-family: "Space Mono", monospace;
 }
+}
+
+
+
 
 body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
+  background: rgb(255, 238, 248);
   user-select: none;
   -webkit-app-region: drag;
 }
-
-
 
 button,
 input,
@@ -135,6 +212,8 @@ select {
   -webkit-app-region: no-drag;
   cursor: pointer;
 }
+
+/*google fonts stuff*/
 .space-mono-regular {
   font-family: "Space Mono", monospace;
   font-weight: 400;
@@ -160,15 +239,13 @@ select {
   font-style: italic;
 }
 
-/* timer stuff */
+/* even more timer stuff, this kind of just ended up at the bottom */
 @media screen and (min-width: 32px) and (max-width: 600px) {
   .pomodoro {
     transform: scale(.9);
   }
-
   .timer {
     width: 500px;
   }
-  
-
 }
+
