@@ -1,6 +1,7 @@
 ## welcome to the productivity corner! ˗ˏˋ ★ ˎˊ˗
 This is the productivity corner, a site where you'll find some tools to help you get work done! 
-view here: 
+
+view here: https://ayesha-h3.github.io/productivity-corner/
 ### features  ˖.𖥔 ݁ ˖ ⊹ ࣪ ˖ 
 -a pomodoro timer!
 -an embedded lofi playlist (curated by me :D)
