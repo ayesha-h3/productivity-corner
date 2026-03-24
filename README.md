@@ -4,7 +4,9 @@ This is the productivity corner, a site where you'll find some tools to help you
 view here: https://ayesha-h3.github.io/productivity-corner/
 ### features  ˖.𖥔 ݁ ˖ ⊹ ࣪ ˖ 
 -a pomodoro timer!
+
 -an embedded lofi playlist (curated by me :D)
+
 -a to-do list tracker that saves in your browser so you can always keep track of your tasks!
 ### how/why ✮⋆˙
 I love using the pomodoro technique to manage my time while I'm studying and while I've found a lot of sites that have both a pomodoro timer and a to-do list, most were either limited by a paywall or weren't very visually pleasing. So, I decided to make my own tool! 
